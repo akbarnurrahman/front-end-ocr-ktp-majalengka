@@ -55,7 +55,7 @@
                         <h5 class="modal-title">Login Berhasil</h5>
                     </div>
                     <div class="modal-body">
-                        Anda Akan Segera Dialihkan
+                        klik ok untuk melanjutkan
                     </div>
                     <div class="modal-footer">
                         <div class="btn-inline">
@@ -88,6 +88,45 @@
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade dialogbox" id="DialogUbahPin" data-backdrop="static" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Ubah Kode Pin</h5>
+                    </div>
+                    <form>
+                        <div class="modal-body text-left mb-2">
+                            <div class="form-group basic">
+                                <div class="input-wrapper">
+                                    <label class="label" for="email1">Pin Lama</label>
+                                    <input type="number" pattern="\d*" maxlength="6" class="form-control" id="email1" >
+                                    <i class="clear-input">
+                                        <ion-icon name="close-circle"></ion-icon>
+                                    </i>
+                                </div>
+                            </div>
+
+                            <div class="form-group basic">
+                                <div class="input-wrapper">
+                                    <label class="label" for="password1">Pin Baru </label>
+                                    <input type="number" pattern="\d*" maxlength="6" class="form-control" id="password1">
+                                    <i class="clear-input">
+                                        <ion-icon name="close-circle"></ion-icon>
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="btn-inline">
+                                <button type="button" class="btn btn-text-danger" id="batal-ubah-pin" data-dismiss="modal">BATAL</button>
+                                <button type="button" class="btn btn-text-primary" data-dismiss="modal" id="btn-ubah-pin-action">UBAH</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

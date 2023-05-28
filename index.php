@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-
+<?php session_start(); ?>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport"
@@ -95,25 +95,71 @@
      </div>
     </div>
 
-    <div id="app-utama" style="display:none">
-    <div class="appHeader bg-primary scrolled">
-        <div class="left">
-            <a href="#" class="headerButton" data-toggle="modal" data-target="#sidebarPanel">
-                <ion-icon name="menu-outline"></ion-icon>
-            </a>
-        </div>
-        <div class="pageTitle">
-            Pages
-        </div>
-        <div class="right">
-            <a href="javascript:;" class="headerButton toggle-searchbox">
-                <ion-icon name="search-outline"></ion-icon>
-            </a>
+    <div id="anggota-baru-slide" style="display:none">
+            <div class="item p-2">
+                <img src="assets/img/hmm.png"  alt="alt" class="imaged w-100 square mb-4">
+                <h2>Hmm....</h2>
+                <p>sepertinya kamu baru pertama kali menggunakan aplikasi ini boleh aku mengenalmu?</p>
+            </div>
+
+
+        <div class="carousel-button-footer">
+            <div class="row">
+                <div class="col-12">
+                    <a class="btn btn-primary btn-lg btn-block" id="btn-pengenalan" style="width:100% !important"">Lanjutkan </a>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- * App Header -->
 
-    <!-- Search Component -->
+
+
+    <div id="name-form" style="display:none">
+            <div class="section"style="margin-top:9em !important">
+                <h2>Ngomong Ngomong,Nama Kamu Siapa?</h2>
+            </div>
+            <div class="section mt-2 mb-5" >
+              
+                   
+                    <div class="form-group basic">
+                        <div class="input-wrapper" style="margin-top:2em">
+                          
+                            <input type="text" class="form-control" style="font-size:20px;" id="name-register">
+                            <i class="clear-input">
+                                <ion-icon name="close-circle"></ion-icon>
+                            </i>
+                        </div>
+                    </div>
+                 
+
+                    <div class="form-button-group">
+                        <button type="submit" class="btn btn-primary btn-block btn-lg" id="save-register">Lanjutkan</button>
+                    </div>
+
+            </div>
+        </div>
+
+    <div id="selamat-bergabung" style="display:none">
+            <div class="item p-2">
+                <img src="assets/img/selamat.png"  alt="alt" class="imaged w-100 square mb-4">
+                <h2>Hai Selamat Bergabung...</h2>
+                <p>selamat bergabung bersama kami,untuk keamanan kamu bisa mengubah kode pin mu atau kamu juga bisa mengubahnya lain kali.</p>
+            </div>
+
+
+        <div class="carousel-button-footer">
+        
+            <div class="row">
+                <div class="col-12 mb-5">
+                <a class="btn btn-primary btn-lg btn-block" id="btn-ubah-pin" style="width:100% !important"">Ubah Sekarang </a>
+                    <a class="btn btn-danger btn-lg btn-block" id="btn-ubah-lain-kali" style="width:100% !important"">Ubah Lain kali </a>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+
+    <div id="app-utama" style="display:none">
     <div id="search" class="appHeader">
         <form class="search-form">
             <div class="form-group searchbox">
@@ -133,214 +179,37 @@
     <div id="appCapsule">
 
         <div class="header-large-title">
-            <h1 class="title">Pages</h1>
+            <h1 class="title">Data KTP</h1>
         </div>
-        <div class="section full mt-2">
-            <div class="section-title">Block Buttons</div>
-            <div class="wide-block pt-2 pb-2">
-                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#DialogBlockButton">
-                    Show
-                </button>
-            </div>
-        </div>
+
 
         <!-- Dialog Block Button -->
-        
-        <ul class="listview image-listview flush transparent mt-3 mb-2">
-            <li>
-                <a href="page-chat.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        Chat
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="page-fullpage-slider.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="image-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        Full Slider
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="page-login.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        Login
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="page-register.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="person-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        Register
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="page-forgot-password.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="refresh-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        Forgot Password
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="page-sms-verification.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="call-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        SMS Verification
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="page-profile.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="person-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        Profile
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="page-product-page.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="golf-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        Product Page
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="page-cart.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="cart-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        Cart
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="page-blank.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="document-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        Blank Page
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="page-faq.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="help-buoy-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        FAQ
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="page-blogpost.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="document-text-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        Blog Post
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="page-about.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="document-text-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        About
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="page-contact.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="call-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        Contact
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="page-maintenance.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="hammer-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        Maintenance
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="page-under-construction.html" class="item">
-                    <div class="icon-box bg-primary">
-                        <ion-icon name="megaphone-outline"></ion-icon>
-                    </div>
-                    <div class="in">
-                        Under Construction
-                    </div>
-                </a>
-            </li>
-        </ul>
-
-
-        <!-- app footer -->
-        <div class="appFooter">
-            <img src="assets/img/logo.png" alt="icon" class="footer-logo mb-2">
-            <div class="footer-title">
-                Copyright © Mobilekit 2020. All Rights Reserved.
-            </div>
-            <div>Mobilekit is PWA ready Mobile UI Kit Template.</div>
-            Great way to start your mobile websites and pwa projects.
-
-            <div class="mt-2">
-                <a href="javascript:;" class="btn btn-icon btn-sm btn-facebook">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-                <a href="javascript:;" class="btn btn-icon btn-sm btn-twitter">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-                <a href="javascript:;" class="btn btn-icon btn-sm btn-linkedin">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
-                <a href="javascript:;" class="btn btn-icon btn-sm btn-instagram">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-                <a href="javascript:;" class="btn btn-icon btn-sm btn-whatsapp">
-                    <ion-icon name="logo-whatsapp"></ion-icon>
-                </a>
-                <a href="#" class="btn btn-icon btn-sm btn-secondary goTop">
-                    <ion-icon name="arrow-up-outline"></ion-icon>
-                </a>
-            </div>
-
-        </div>
+         <?php include "kecamatan-ktp/argapura.php" ?>
+         <?php include "kecamatan-ktp/banjaran.php" ?>
+         <?php include "kecamatan-ktp/baturejeg.php" ?>
+         <?php include "kecamatan-ktp/cigasong.php" ?>
+         <?php include "kecamatan-ktp/cikijing.php" ?>
+         <?php include "kecamatan-ktp/cingambul.php" ?>
+         <?php include "kecamatan-ktp/dawuan.php" ?>
+         <?php include "kecamatan-ktp/jatitujuh.php" ?>
+         <?php include "kecamatan-ktp/jatiwangi.php" ?>
+         <?php include "kecamatan-ktp/kadipaten.php" ?>
+         <?php include "kecamatan-ktp/kasakondel.php" ?>
+         <?php include "kecamatan-ktp/kertajati.php" ?>
+         <?php include "kecamatan-ktp/lemahsugih.php" ?>
+         <?php include "kecamatan-ktp/leuwimunding.php" ?>
+         <?php include "kecamatan-ktp/ligung.php" ?>
+         <?php include "kecamatan-ktp/maja.php" ?>
+         <?php include "kecamatan-ktp/majalengka.php" ?>
+         <?php include "kecamatan-ktp/malausama.php" ?>
+         <?php include "kecamatan-ktp/palasah.php" ?>
+         <?php include "kecamatan-ktp/panyingkiran.php" ?>
+         <?php include "kecamatan-ktp/rajagaluh.php" ?>
+         <?php include "kecamatan-ktp/sindang.php" ?>
+         <?php include "kecamatan-ktp/sindangwangi.php" ?>
+         <?php include "kecamatan-ktp/sukahaji.php" ?>
+         <?php include "kecamatan-ktp/sumberjaya.php" ?>
+         <?php include "kecamatan-ktp/talaga.php" ?>
         <!-- * app footer -->
 
     </div>
@@ -349,35 +218,35 @@
 
     <!-- App Bottom Menu -->
    <div class="appBottomMenu">
-                <a href="#" class="item">
+                <a  class="item">
                     <div class="col">
-                        <ion-icon name="file-tray-full-outline"></ion-icon>
-                        <strong>Today</strong>
+                    <ion-icon name="apps-outline"></ion-icon>
+                        <strong>Utama</strong>
                     </div>
                 </a>
-                <a href="#" class="item active">
+                <a class="item">
                     <div class="col">
                         <ion-icon name="calendar-outline"></ion-icon>
                         <strong>Calendar</strong>
                     </div>
                 </a>
-                <a href="#" class="item">
+                <a  class="item">
                     <div class="col">
                         <div class="action-button large" id="scan-button">
                             <ion-icon name="scan-outline"></ion-icon>
                         </div>
                     </div>
                 </a>
-                <a href="#" class="item">
+                <a  class="item">
                     <div class="col">
                         <ion-icon name="document-text-outline"></ion-icon>
-                        <strong>Docs</strong>
+                        <strong>Histori</strong>
                     </div>
                 </a>
-                <a href="javascript:;" class="item">
+                <a class="item">
                     <div class="col">
-                        <ion-icon name="people-outline"></ion-icon>
-                        <strong>Profile</strong>
+                    <ion-icon name="settings-outline"></ion-icon>
+                    <strong>Pengaturan</strong>
                     </div>
                 </a>
             </div>

@@ -12,12 +12,15 @@ session_start();
 
 	
 	if($cek > 0 ) { 
+		while ($rows = mysqli_fetch_array($data)):  // jika data bernilai 1 / true  buat session
 			// Autentikasi berhasil
-			$_SESSION['user'] = 'John Doe'; // Simpan data pengguna ke sesi
-			$response = array('success' => true);
+			$_SESSION['id'] = $rows['id']; // Simpan data pengguna ke sesi
+			$_SESSION['new_user'] = $rows['new_user'];
+		endwhile;
+			$response = array('success' => true, 'netw_user' => $_SESSION['new_user']);
 		} else {
 			// Autentikasi gagal
-			$response = array('success' => false);
+			$response = array('success' => false,);
 		}
 	
 		echo json_encode($response);
